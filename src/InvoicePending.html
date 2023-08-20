@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>InvoicePending</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+   <style type="text/css">
+    @page {
+        size: A4 portrait;
+        margin: 5mm 5mm;
+    }
+    
+    body {
+        -webkit-print-color-adjust: exact;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Poppins', sans-serif;
+    }
+      
+
+      table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          padding: 0;
+          width: 100%;
+          table-layout: auto;
+      }
+
+      
+      ul{
+        padding :0px;
+        margin: 0px;
+        list-style-type: none;
+        list-style: none;
+      }
+</style>
+  </head>
+  <body style="height:100%;">
+    <div style="position: relative; height: 100%; padding: 0px 19px;margin-bottom: 200px;">
+        <img src="Assets/Rectangle.png" alt="" style="vertical-align: top; width: 100%;">
+      <table style="font-family: Lexend; border-collapse: collapse; border-spacing: 0;width: 100%; height: 100%; ">
+        <!--1-->
+      <tr>
+        <td style=" padding:26px 21px; margin-bottom: 11px;">
+          <table style="width: 100%; " >
+            <tr >
+              <td width="70%"> <img src="Assets/Logo.png" alt="" style="width: 300px;height: 50px;"></td>
+              <td  style="text-align: right;"> 
+                <p style="color: #0047BA;font-family: Inter;font-size: 11.797px;font-style: normal;font-weight: 600;line-height: normal;">Invoice
+                <span style="font-weight: 400;border-left: 0.7px solid #0047BA; padding-left: 4px; margin-left:4px;">#01234</span></p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!--2-->
+    <tr>
+        <td style="padding: 19px 20px 13px;background: #F5F8FE;border-top-right-radius: 9px; border-top-left-radius: 9px;">
+            <table style="width: 100%;border-bottom: 1px solid #DEE9FF;">
+                <tr>
+                    <td style="width: 41%;">
+                        <ul style="justify-items: left;vertical-align: top;">
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 800;line-height: normal;padding-bottom:3px;">Issue date</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: normal;padding-bottom: 13px;"> 01 Jan, 2022</li>
+                        </ul></td>
+                    <td style="width: 19%;">
+                        <ul style="justify-items:center;vertical-align: top;">
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 800;line-height: normal;padding-bottom:3px;">Due date</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: normal;padding-bottom: 13px;"> 01 Jan, 2022</li>
+                        </ul>
+                    </td>
+                    <td style="position: relative; right: 0px;text-align:right;">
+                        <ul style=" display: inline-block;vertical-align: top;">
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 800;line-height: normal;text-align: left;padding-bottom:3px;">Status</li>
+                            <li style="display:inline-block;"><button style="display: flex; justify-content: center; align-items: center; gap: 4px;align-self: stretch; border-radius: 16px; border: 0.5px solid #DC6803;background: #FFF;padding: 1px 28px;margin-bottom: 13px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><circle cx="4.5" cy="4" r="3" fill="#DC6803"/></svg>
+                                <h2 style="color: var(--warning-700, #B54708);text-align: center;font-family: Inter;font-size: 10px;font-style: normal; font-weight: 500;line-height: 18px;">Pending</h2>
+
+                            </button></li>
+                        </ul>
+                    </td>
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!--3-->
+    <tr>
+    <td style="padding: 0px 20px;background: #F5F8FE; border-bottom-left-radius: 9px; border-bottom-right-radius:9px ;">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 41%;vertical-align: top;">
+                        <ul style="justify-items: left; vertical-align: top;top: 0px;">
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 800;line-height: normal;vertical-align: top;padding-bottom:3px;">From</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: 15px;">Kenya Wildlife Service</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: 15px;">+254 (0) 726 610508/9,</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: 15px;">+254 (0) 726 610533e </li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: 15px;">kws@kws.go.ke</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: 15px;padding-bottom: 16px; ">customerservice@kws.go.ke</li>
+                            
+                        </ul></td>
+                    <td style="width: 19%;vertical-align: top;">
+                        <ul style="vertical-align: top;top: 0px;">
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 800;line-height: normal;vertical-align: top;padding-bottom:3px;">To</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: 15px;"> Nicole Musundi</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: 15px;"> 0700505023</li>
+                            <li style="color: #000;font-family: Inter;font-size: 10px;font-style: normal;font-weight: 400;line-height: 15px;padding-bottom: 16px;"> nikkimusundi@gmail.com</li>
+
+
+                        </ul>
+                    </td>
+                    <td style="text-align: right;padding-bottom: 16px;">
+                        
+                            <img src="Assets/QrCode.png" alt="" style="width: 105px;height: 105px;display: inline-block;">
+                        
+                    </td>
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+     <!--4-->
+     <tr >
+        <td style="padding: 27px 20px 0px;">
+            <table style="width: 100%; border-bottom:1px solid #DEE9FF;margin-bottom: 6px;">
+                <tr >
+                    <td style="width: 41%;padding: 11px 0px;">
+                        <p style="text-align:  left;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Service</p>
+                    </td>
+                    <td style="width: 19%;padding: 11px 0px;">
+                        <p style="text-align:  left;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Cost</p>
+                    </td>
+                    <td style="width: 20%;padding: 11px 0px;">
+                        <p style="text-align:  center;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Qty</p>
+                    </td>
+                    <td style="width: 20%;padding: 11px 0px;">
+                        <p style="text-align:  right;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Total</p>
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!--5-->
+    <tr>
+        <td style="padding: 0px 20px;">
+            <table style="width: 100%;">
+                <tr style="background: #F5F8FE;">
+                    <td style="width: 41%;padding: 11px 0px;">
+                        <p style="text-align:  left;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Entrance Fee</p></td>
+                    <td style="width: 19%;">
+                        <p style="text-align:left;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">£5,000</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: center;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">1</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: right;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">KES 50,000</p>        
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+     <!--6-->
+     <tr>
+        <td style="padding: 0px 20px;">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 41%;padding: 11px 0px;">
+                        <p style="text-align:  left;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Entrance Fee</p></td>
+                    <td style="width: 19%;">
+                        <p style="text-align:left;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">£5,000</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: center;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">1</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: right;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">KES 50,000</p>        
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+     <!--7-->
+     <tr>
+        <td style="padding: 0px 20px;">
+            <table style="width: 100%;">
+                <tr style="background: #F5F8FE;">
+                    <td style="width: 41%;padding: 11px 0px;">
+                        <p style="text-align:  left;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Entrance Fee</p></td>
+                    <td style="width: 19%;">
+                        <p style="text-align:left;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">£5,000</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: center;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">1</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: right;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">KES 50,000</p>        
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!--8-->
+    <tr>
+        <td style="padding: 0px 20px;">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 41%;padding: 11px 0px;">
+                        <p style="text-align:  left;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Entrance Fee</p></td>
+                    <td style="width: 19%;">
+                        <p style="text-align:left;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">£5,000</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: center;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">1</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: right;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">KES 50,000</p>        
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!--9-->
+    <tr>
+        <td style="padding: 0px 20px;">
+            <table style="width: 100%;margin-bottom: 10px;">
+                <tr style="background: #F5F8FE;">
+                    <td style="width: 41%;padding: 11px 0px;">
+                        <p style="text-align:  left;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;">Entrance Fee</p></td>
+                    <td style="width: 19%;">
+                        <p style="text-align:left;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">£5,000</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: center;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">1</p>        
+                    </td>
+                    <td style="width: 20%;">
+                        <p style="text-align: right;color: #000;font-family: Poppins;font-size: 10px; font-style: normal; font-weight: 400; line-height: normal;">KES 50,000</p>        
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+     <!--10-->
+     <tr>
+        <td style="padding:0px 20px;">
+            <table style="width: 100%; border-top:1px solid#DEE9FF;">
+                <tr >
+                    <td style="width: 41%;padding: 13px 0px;">
+                        <p style="text-align:  left;color: #000;font-family: Poppins;font-size: 10px;font-style: normal;font-weight: 600;line-height: normal;"></p></td>
+                    <td style="width: 19%;padding: 13px 0px;border-bottom:1px solid#DEE9FF;">
+                        <p style="color: #0047BA;font-family: Poppins;font-size: 16px;font-style: normal;font-weight: 400; line-height: normal;">Invoice total</p>        
+                    </td>
+                    <td style="width: 20%;border-bottom:1px solid#DEE9FF;">
+                        <p style="text-align: center;color: #0047BA;font-family: Poppins;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;">5</p>        
+                    </td>
+                    <td style="width: 20%;border-bottom:1px solid#DEE9FF;">
+                        <p style="color: #0047BA;text-align: right;font-family: Poppins; font-size: 14px;font-style: normal;font-weight: 600;line-height: normal;flex-wrap: nowrap;">KES 2,500,000</p>        
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+
+
+
+
+
+        </table></div></body>
