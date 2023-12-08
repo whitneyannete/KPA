@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter">
+    <div class="min-h-screen">
+        <section>
+            <section class="relative">
+                <div class="absolute w-full grid grid-cols-12 pt-6 px-9 items-center">
+                    <!-- Logo -->
+                    <div class="col-span-4">
+                            <img src="Assets/KPA Logo.svg" alt="" class="w-24 h-24">
+                    </div>
+                    <!-- Menu -->
+                    <div class="col-span-8 md:col-span-5 xl:col-span-4">
+                        <div x-data="{open:false}" class="md:hidden flex pl-24 align-top">
+                            <div class="absolute top-0" >
+                            <button @click="open = !open" class="block h-14 w-14 ">
+                                <img class=" h-20 w-20  object-cover cursor-pointer  " src="Assets/bars.png" alt="pim">
+                            </button>
+                            <div x-show="open" class="absolute   bg-[#0000004a] text-white w-32 py-1 left-0 rounded-sm z-10 "
+                                style=" display:none; border:4px solid #0047C4 ; box-shadow: 4px 4px 5px #0000004a;  ">
+                                <a href="#" class="block px-4 py-[3px] hover:bg-[#0047C4] hover:text-white cursor-pointer text-base"> Home</a>
+                                <a href="#" class="block px-4 py-[3px] hover:bg-[#0047C4] hover:text-white cursor-pointer text-base">FAQs</a>
+                                <a href="#" class="block px-4 py-[3px] hover:bg-[#0047C4] hover:text-white cursor-pointer text-base">Resources</a>
+                                <a href="#" class="block px-4 py-[3px] hover:bg-[#0047C4] hover:text-white cursor-pointer text-base">Contacts</a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:block">
+                            <div class="rounded-[20px] flex  z-10 justify-center items-center gap-2 md:gap-4 lg:gap-12 text-white bg-[#0000004a] px-4 py-2">
+                                <a href="#" class="font-Inter text-sm xl:text-base font-medium">Home </a>
+                                <a href="#" class="font-Inter text-sm xl:text-base font-medium">FAQs</a>
+                                <a href="#" class="font-Inter text-sm xl:text-base font-medium">Resources </a>
+                                <a href="#" class="font-Inter text-sm xl:text-base font-medium">Contacts</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-4"></div>
+                </div>
+
+                <div class="max-h-[580px] overflow-hidden">
+                    <img src="Assets/LandingPage.png" class=" w-full " alt="Kenya Institute Of Highways & Building Technology">
+                </div>
+                
+                <!-- content box -->
+                <div class="md:absolute w-full left-0 right-0 -bottom-32 lg:-bottom-24 z-10 max-w-7xl mx-auto px-4 ">
+                    <div class="grid grid-cols-12 w-full bg-transparent  md:divide-x-0 divide-primary-100 py-2 md:py-0 ">
+                        <div class="col-span-12  md:col-span-7 pl-4  md:pl-14 pr-16 lg:pr-40 py-6  lg:py-12 space-y-3  bg-[#FFF] text-black md:rounded-tl-3xl md:rounded-bl-3xl flex flex-col justify-center">
+                            <img src="Assets/Rectangle.png" alt="" class="w-24 h-auto">
+                            <h2 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#0047BA]">
+                                Access to our Services Online is Now Faster and More Convenient </h2>
+                            <p class="text-base xl:text-lg font-normal text-[#676767]">
+                                KPA’s new online portal delivers ease of use and convenience for our customers. Track consignment, lodge documents for pickup orders, and pay for invoices all in one place.
+                        </div>
+                        <div class="col-span-12  md:col-span-5 px-4 md:px-8 pr-16 py-5 lg:py-7  space-y-3 text-black md:rounded-tr-3xl md:rounded-br-3xl flex flex-col justify-center bg-[#003283]">
+                            <div>
+                                <img src="Assets/ECitizenLogo.svg" alt="ecitizen" class="h-6 sm:h-7 lg:h-8 ">
+                            </div>
+                            <p class=" text-[#fff] text-base md:text-xl font-normal ">
+                                Access the Kenya Institute Of Highways & Building Technology services using your eCitizen account
+                            </p>
+                            <div>
+                                <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-4 py-1 border b rounded-3xl text-lg font-bold  hover:opacity-80 space-x-2 text-[#FFF]">
+                                    <span class="flex">Log In <img src="Assets/ArrowRight.png" alt="" class="w-7 h-5 pl-2 pt-2"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- About -->
+        <section class="bg-[#0047C4]">
+            <div class="max-w-7xl mx-auto px-4 ">
+                <div class="pb-8 sm:pb-16 pt-8 sm:pt-40 md:pt-44 lg:pt-40  rounded-xl mb-12  ">
+                    <div class="px-0 mx-auto grid grid-cols-12 lg:gap-x-4 bg-[#0047C4]">
+                        <div class="col-span-12 md:col-span-6 relative z-10 "><img alt="Kenya Institute Of Highways & Building Technology" src="Assets/Image1.png" class=" right-0 left-0 md:-top-3 lg:-top-2 w-full"></div>
+                        <div class="col-span-12 md:col-span-6 sm:pr-1  px-0 sm:pl-8 pt-8 md:pt-0 space-y-5 md:space-y-8 lg:space-y-10">
+                            <div>
+                                <h2 class="text-lg md:text-2xl lg:text-3xl font-bold text-[#fff] mb-4 relative ">
+                                    About KPA
+                                </h2>
+                                <img src="Assets/Rectangle.png" alt="" class="w-24 h-auto">
+                                <p class="tracking-[0.01em] text-lg lg:text-2xl font-medium mb-5 md:mb-0 text-[#FFF] pt-4 text-justify">
+                                    Kenya Ports Authority manages Inland Waterways as well as Inland Container Depots with a mission to provide efficient and competitive port services and facilitate global trade.   
+                                </p>
+                                <p class="tracking-[0.01em] text-lg lg:text-2xl font-normal mb-5 md:mb-0 text-[#ffffff99] pt-4 lg:pt-8 text-justify">
+                                    KPA is proud to introduce its online portal. We now enable agents to access services in one place.
+                                    In a leap towards transparency, we are also bringing agents’ customers on board. Customers can now track consignments and even pay directly for invoices through a variety of payment options.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Screens -->
+        <section>
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0047BA] text-center px-10s md:px-20 ">A whole new experience for Agents and Consignees  </h2>
+                <div class="pl-4 w-full"><img src="Assets/Screens.png" alt="" class="w-full"></div>
+        </section>
+        <!-- grids -->
+        <section>
+            <div class="max-w-7xl mx-auto px-4 pb-8">
+                <p class="text-[#0047BA] font-[Source Sans Pro] text-3xl font-bold">Online Services</p>
+                <p class="text-[#000] font-family-[Source Sans Pro] text-xl font-normal">Apply for our services and pay using mobile money. After completing the application print the resulting document and get what you need at ease.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 z-10 grid grid-cols-12 gap-x-3 xl:gap-x-6 gap-y-4 xl:gap-y-8">
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#29D1FF"/></svg> 
+                            <p class=" text-[#00B2E3] text-center text-xs font-medium font-[Inter]">Consignees</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Tracking consignments</p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply, pay and gain access to national parks in Kenya. One fee to see it all.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Document lodgement </p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply to be able to volunteer as a warden based on your expertise.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#29D1FF"/></svg> 
+                            <p class=" text-[#00B2E3] text-center text-xs font-medium font-[Inter]">Consignees</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Pay for Invoices</p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply, pay and gain access to national parks in Kenya. One fee to see it all.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Tracking consignments</p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply, pay and gain access to national parks in Kenya. One fee to see it all.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#29D1FF"/></svg> 
+                            <p class=" text-[#00B2E3] text-center text-xs font-medium font-[Inter]">Consignees</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Tracking consignments</p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply, pay and gain access to national parks in Kenya. One fee to see it all.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#29D1FF"/></svg> 
+                            <p class=" text-[#00B2E3] text-center text-xs font-medium font-[Inter]">Consignees</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Tracking consignments</p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply, pay and gain access to national parks in Kenya. One fee to see it all.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Tracking consignments</p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply, pay and gain access to national parks in Kenya. One fee to see it all.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8 ">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#29D1FF"/></svg> 
+                            <p class=" text-[#00B2E3] text-center text-xs font-medium font-[Inter]">Consignees</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Tracking consignments</p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply, pay and gain access to national parks in Kenya. One fee to see it all.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" rounded-xl bg-[#F5F8FF] col-span-12 sm:col-span-6 md:col-span-4 p-6 sm:p-5 xl:p-6">
+                    <div class="flex gap-x-8">
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#75A7FF"/></svg> 
+                            <p class=" text-[#0047C4] text-center text-xs font-medium font-[Inter]">Agents</p></button>
+                         <button class="flex  py-1 px-2 items-center gap-1 rounded-2xl mix-blend-multiply bg-[#F5F8FF]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3" fill="#29D1FF"/></svg> 
+                            <p class=" text-[#00B2E3] text-center text-xs font-medium font-[Inter]">Consignees</p></button>
+                    </div>
+                    <p class="text-[#0047BA] font-[Source Sans Pro] text-xl lg:text-2xl font-bold pt-8">Tracking consignments</p>
+                    <p class="text-[#000] font-[Source Sans Pro] text-lg lg:text-xl font-normal pt-8">Apply, pay and gain access to national parks in Kenya. One fee to see it all.</p>
+                    <div class=" flex justify-between pt-12 items-center">
+                        <div class="flex align-bottom">
+                             <p class="text-[#1C2806] font-[Source Sans Pro] text-sm xl:text-base font-normal whitespace-nowrap">Learn more</p>
+                        </div>
+                        <div>
+                            <a href=" " class="whitespace-nowrap inline-flex items-center justify-center px-2 xl:px-4 py-1 border b border-[#0047BA] rounded-3xl text-sm  xl:text-lg font-bold  hover:opacity-80 space-x-2 text-[#0047BA]">
+                                <span class="flex">Apply Now <img src="Assets/arrow-right-blue.png" alt="" class="w-7 h-6 pl-2 "></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="max-w-7xl mx-auto px-4 z-10 pt-28 ">
+                <div class="grid grid-cols-12 w-full  py-2 sm:py-0 bg-[rgb(0,71,186)] md:bg-transparent">
+                    <div class="col-span-12 md:col-span-8 pl-4 sm:pl-8  md:pl-14 pr-12 md:pr-32 lg:pr-40 md:pb-28 md:mb-16 pt-8  space-y-3 bg-[rgb(0,71,186)] text-black sm:rounded-3xl  flex flex-col justify-center  ">
+                        <h2 class="text-4xl lg:text-5xl font-bold text-[#FFF] font-[Akzidenz-Grotesk] ">
+                            Tracking experience 
+                        </h2>
+                        <p class=" font-normal text-[#ffffffcc] font-[Akzidenz-Grotesk Pro]  text-xl lg:text-2xl font-normal pt-10">
+                            KPA is proud to introduce its online portal. We now enable agents to access services in one place.
+                            In a leap towards transparency, we are also bringing agents’ customers on board. Customers can now track consignments and even pay directly for invoices through a variety of payment options.
+                        </p>
+                    </div>
+                    <div class="col-span-12 md:col-span-4 sm:rounded-3xl  md:pt-20 md:-ml-[32%] m-4 md:m-0">
+                        <img src="Assets/Image2.png" alt="" class="h-[400px] md:h-[520px] w-full md:w-[90%] ">
+                    </div>
+                </div>
+                <div>
+                    <img src="Assets/Location.png" alt="" class="h-[242px] w-auto pt-8 sm:pt:0">
+                </div>
+            </div>
+        </section>
+        <section class="max-w-7xl mx-auto px-4 pt-4">
+            <div class=" bg-[#F0FCFF]">
+                <div class=" py-8 rounded-xl mb-8 lg:mb-24">
+                    <div class=" grid grid-cols-12 px-8">
+                             <div class="col-span-12 md:col-span-4 relative z-10  "><img alt="Kenya Institute Of Highways & Building Technology" src="Assets/Image3.png" class="md:absolute left-0 md:h-[400px] w-[fulls] md:w-auto min-w-[260px]"></div>
+                        <div class="col-span-12 md:col-span-8  sm:pr-8 lg:pr-20 md:pl-16 pt-8 sm:pt:0">
+                             <div class="">
+                                <h2 class=" text-[#0047BA] font-[Source Sans Pro] text-2xl lg:text-3xl font-semibold">
+                                    Service excellence is key to our operations and​ we endeavour to exceed customer expectations
+                                </h2>
+                                <p class=" text-[#000] font-[Source Sans Pro] text-base lg:text-lg font-normal pt-8">
+                                       The Kenya Ports Authority’s mandate is to maintain, operate, improve and regulate all sea and inland waterway ports in Kenya.</p>
+                                    <p class=" text-[#000] font-[Source Sans Pro] text-base lg:text-lg font-normal pt-4">
+                                       Other ports include Lamu, Malindi, Kilifi, Mtwapa, Kiunga, Shimoni, Funzi and Vanga. It is only the port of Mombasa which is fully developed with modern equipment hence making it the principal port in the region. At the port of Mombasa the Kenya Ports Aut​hority’s core business is
+                                      </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div><img src="Assets/FooterArt2.png" alt="" class="w-full h-auto"></div>
+            <div class="  bg-[#0047BA]">
+                <div class="max-w-7xl mx-auto px-4">
+
+                    <div class=" py-8 rounded-xl">
+                        <div class=" grid grid-cols-12 ">
+                                 <div class="col-span-12 sm:col-span-6 lg:col-span-3 ">
+                                    <div class="flex gap-x-3">
+                                        <img src="Assets/phone.png" alt="" class="w-6 h-6"> <p class="text-[#FFF] text-xl font-[Inter] font-semibold">Contact Lines</p>
+                                    </div>
+                                    <div class="pl-9  pt-2 md:pt-3">
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">+254-41-2112999</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">+254797690600 (For Text Messages)</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">+254709092999 (For calling)</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">+254794272376 (Corruption Hotline)</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">+254110921564 (Corruption Hotline)</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">+254709093999</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">+254730653999</p>
+                                    </div>
+                                 </div>
+                                 <div class="col-span-12 sm:col-span-6 lg:col-span-3 pt-6  sm:pt-0">
+                                    <div class="flex gap-x-3">
+                                        <img src="Assets/message.png" alt="" class="w-6 h-6"> <p class="text-[#FFF] text-xl font-[Inter] font-semibold">Emails</p>
+                                    </div>
+                                    <div class="pl-9 pt-2 md:pt-3">
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">customerfeedback@kpa.co.ke</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">ca@kpa.co.ke</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium"> kpa_careers@kpa.co.ke</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium"> kpa_training@kpa.co.ke</p>
+                                    </div>
+                                 </div>
+                                 <div class="col-span-12 sm:col-span-6 lg:col-span-3 pt-6  lg:pt-0">
+                                    <div class="flex gap-x-3">
+                                        <img src="Assets/message.png" alt="" class="w-6 h-6"> <p class="text-[#FFF] text-xl font-[Inter] font-semibold">Address</p>
+                                    </div>
+                                    <div class="pl-9 pt-2 md:pt-3">
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">Kenya Ports Authority ©</p>
+                                        <p class="text-[#FFF] font-[Berthold Akzidenz Grotesk BE]  sm:text-sm xl:text-base font-medium">P.O. Box 95009-80104 Mombasa</p>
+                                    </div>
+                                 </div>
+                                 <div class="col-span-12 sm:col-span-6 lg:col-span-3 pt-6 lg:pt-0">
+                                    <div class="flex gap-x-3 pl-9">
+                                        <p class="text-[#FFF] text-xl font-[Inter] font-semibold">Get the App</p>
+                                    </div>
+                                    <div class="pl-9 pt-2 md:pt-3">
+                                        <p><img src="Assets/AppStore.svg" alt="" class="pb-4"></p>
+                                        <p><img src="Assets/GooglePlay.svg" alt=""></p>
+                                    </div>
+                                 </div>
+                            
+                            </div>
+                        <div class=" grid grid-cols-12 pt-20">
+                            <div class="col-span-12 lg:col-span-4">
+                                <p class="text-white text-xl font-semibold font-Inter">Follow Us </p>
+                                <div class="inline-flex">
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                                        <path d="M34.8337 19.0961C34.8337 10.2981 27.7456 3.16675 19.0003 3.16675C10.255 3.16675 3.16699 10.2981 3.16699 19.0961C3.16699 27.0487 8.95566 33.6385 16.5261 34.8334V23.7015H12.5065V19.0951H16.5261V15.5864C16.5261 11.5943 18.8895 9.38819 22.5069 9.38819C24.238 9.38819 26.0514 9.69958 26.0514 9.69958V13.6199H24.0533C22.0868 13.6199 21.4745 14.8486 21.4745 16.1089V19.0961H25.8657L25.1637 23.7005H21.4745V34.8334C29.045 33.6385 34.8337 27.0487 34.8337 19.0961Z" fill="white"/>
+                                      </svg></a>
+                                    <a href="#">  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                                        <path d="M31.5917 12.5402C31.611 12.8194 31.611 13.0986 31.611 13.3803C31.611 21.965 25.0757 31.8657 13.1256 31.8657V31.8606C9.59553 31.8657 6.13876 30.8545 3.16699 28.948C3.6803 29.0097 4.19618 29.0406 4.71334 29.0419C7.63879 29.0445 10.4806 28.0629 12.7821 26.2554C10.0021 26.2026 7.56418 24.39 6.71253 21.7437C7.68639 21.9315 8.68984 21.8929 9.6457 21.6318C6.61475 21.0194 4.43417 18.3564 4.43417 15.2637C4.43417 15.2354 4.43417 15.2084 4.43417 15.1814C5.33728 15.6844 6.34845 15.9636 7.38278 15.9944C4.52809 14.0866 3.64814 10.2889 5.37202 7.31971C8.67055 11.3785 13.5373 13.846 18.7617 14.1072C18.2381 11.8507 18.9534 9.48614 20.6412 7.89991C23.2579 5.44016 27.3734 5.56624 29.8331 8.18165C31.2881 7.89476 32.6827 7.36087 33.9589 6.60442C33.4739 8.10832 32.4588 9.38579 31.1029 10.1976C32.3906 10.0458 33.6488 9.70098 34.8337 9.17481C33.9614 10.4819 32.8628 11.6204 31.5917 12.5402Z" fill="white"/>
+                                      </svg></a>
+                                    <a href="#">  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M31.3377 8.57332C32.6995 8.93917 33.7767 10.0164 34.1426 11.3782C34.8133 13.8579 34.8337 19.0001 34.8337 19.0001C34.8337 19.0001 34.8337 24.1628 34.1629 26.6221C33.7971 27.9839 32.7198 29.0611 31.358 29.427C28.8987 30.0977 19.0003 30.0977 19.0003 30.0977C19.0003 30.0977 9.10195 30.0977 6.6426 29.427C5.28081 29.0611 4.20358 27.9839 3.83772 26.6221C3.16699 24.1424 3.16699 19.0001 3.16699 19.0001C3.16699 19.0001 3.16699 13.8579 3.8174 11.3985C4.18325 10.0367 5.26049 8.9595 6.62228 8.59365C9.08163 7.92291 18.98 7.90259 18.98 7.90259C18.98 7.90259 28.8784 7.90259 31.3377 8.57332ZM24.041 19.0002L15.8296 23.7562V14.2441L24.041 19.0002Z" fill="white"/>
+                                      </svg></a>
+                                    <a href="#">  <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                                        <path d="M33.25 6.84559V31.1544C33.25 31.7102 33.0292 32.2432 32.6362 32.6362C32.2432 33.0292 31.7102 33.25 31.1544 33.25H6.84559C6.2898 33.25 5.75678 33.0292 5.36378 32.6362C4.97078 32.2432 4.75 31.7102 4.75 31.1544V6.84559C4.75 6.2898 4.97078 5.75678 5.36378 5.36378C5.75678 4.97078 6.2898 4.75 6.84559 4.75H31.1544C31.7102 4.75 32.2432 4.97078 32.6362 5.36378C33.0292 5.75678 33.25 6.2898 33.25 6.84559ZM13.1324 15.6471H8.94118V29.0588H13.1324V15.6471ZM13.5096 11.0368C13.5118 10.7197 13.4515 10.4054 13.3322 10.1116C13.2129 9.8179 13.037 9.55053 12.8144 9.3248C12.5917 9.09907 12.3268 8.9194 12.0348 8.79605C11.7427 8.67269 11.4292 8.60808 11.1122 8.60588H11.0368C10.3921 8.60588 9.77375 8.86199 9.31787 9.31787C8.86199 9.77375 8.60588 10.3921 8.60588 11.0368C8.60588 11.6815 8.86199 12.2998 9.31787 12.7557C9.77375 13.2115 10.3921 13.4676 11.0368 13.4676C11.3538 13.4754 11.6693 13.4207 11.9652 13.3065C12.2611 13.1924 12.5316 13.021 12.7612 12.8023C12.9908 12.5835 13.1751 12.3217 13.3035 12.0317C13.4319 11.7417 13.5019 11.4293 13.5096 11.1122V11.0368ZM29.0588 20.9112C29.0588 16.8793 26.4938 15.3118 23.9456 15.3118C23.1112 15.27 22.2805 15.4477 21.5363 15.8272C20.7921 16.2066 20.1603 16.7746 19.7041 17.4744H19.5868V15.6471H15.6471V29.0588H19.8382V21.9254C19.7777 21.1949 20.0078 20.4699 20.4786 19.908C20.9495 19.3461 21.623 18.9927 22.3529 18.9246H22.5122C23.845 18.9246 24.8341 19.7628 24.8341 21.8751V29.0588H29.0253L29.0588 20.9112Z" fill="white"/>
+                                      </svg></a>
+                                </div>
+                            </div>
+                            <div class="col-span-12 lg:col-span-4 pt-9">
+                                <p class="text-white text-sm xl:text-xl font-base font-Inter text-center ">© Copyright eCitizen 2023. All rights Reserved.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
